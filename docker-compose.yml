@@ -1,0 +1,15 @@
+version: '2'
+services:
+   summarization:
+      container_name: 5ions-summ
+      build:
+         context: /home/home/Downloads/5Ions-summarization
+         dockerfile: Dockerfile
+      image: summarization:latest
+      ports:
+          - 5000:5000
+      networks:
+          - python-flask-network
+networks:
+      python-flask-network:
+          driver: bridge

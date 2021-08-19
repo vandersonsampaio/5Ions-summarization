@@ -1,0 +1,17 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore IntelliJ IDE cache directory
+.idea
+
+# Ignore Gradle build output directory
+build
+
+# Ignore logs folder
+logs
+
+# Ignore venv
+venv
+
+# Ignore folders pycache
+*/__pycache__
