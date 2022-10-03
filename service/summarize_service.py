@@ -5,6 +5,9 @@ from sumy.summarizers.lsa import LsaSummarizer as Lsa
 
 class SummarizeService:
 
+    def __init__(self):
+        pass
+
     @staticmethod
     def summarize(content, language):
         parser = PlaintextParser.from_string(content, Tokenizer(language))

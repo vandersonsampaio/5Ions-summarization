@@ -6,11 +6,10 @@ COPY . /app
 RUN apk update && apk add --no-cache libxml2-dev libxslt-dev build-base
 
 RUN pip install --upgrade pip
-RUN pip install flask
-RUN pip install flask_restful
+RUN pip install pika
 RUN pip install marshmallow
 RUN pip install "sumy[LSA]" && \
    python -c "import nltk; nltk.download('punkt')" && \
    rm -rf /root/.cache
 
-CMD ["python","main.py"]
+CMD ["python","rabbit_consumer.py"]

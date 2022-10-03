@@ -1,5 +1,4 @@
 import logging
-# import sys
 
 from datetime import date
 from flask import Flask
@@ -20,8 +19,5 @@ if __name__ == "__main__":
 
     output_file_handler = logging.FileHandler(logFileName, 'a', "utf-8")
     a_logger.addHandler(output_file_handler)
-
-    # stdout_handler = logging.StreamHandler(sys.stdout)
-    # a_logger.addHandler(stdout_handler)
 
     app.run(host="127.0.0.1", port=5000)
